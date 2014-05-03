@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<body>
+	<h1>Text and Shit</h1>
+	{%for x in words%}
+	<p>
+	{% for y in x %}
+	<div style="display:inline; font-weight:900; color:lightgrey;" class="word"> {{y}} </div>
+	{% endfor %}
+	</p>
+	{%endfor%}
+	<form action="." method="POST">
+		<textarea rows="4" cols="50" name="text"></textarea>
+		<br>
+		<input type="submit" name="myForm" value="Send">
+	</form>
+</body>
+<script>
+	$(function(){
+		$('.word').click(function() {
+			if($(this).css('color') == 'rgb(0, 0, 0)'){
+				$(this).css('color', 'lightgrey')
+			}
+			else{
+				$(this).css('color', 'black')
+			}
+		});
+	});	
+</script>
+</html>
