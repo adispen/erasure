@@ -2,15 +2,21 @@
 <html>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <body>
-	<h1>Text and Shit</h1>
-	{%for x in words%}
-	<p>
-	{% for y in x %}
-	<div style="display:inline; font-weight:900; color:lightgrey;" class="word"> {{y}} </div>
-	{% endfor %}
-	</p>
-	{%endfor%}
-	<form action="." method="POST">
+	<div style="text-align:center;">
+		<h1 style="display:inline; color:black;">Eras</h1><h1 style="display:inline; color:lightgrey;">ure</h1>
+	</div>
+	<div style="text-align:center;">
+		<p align=justify>
+		{%for x in words%}
+		<p>
+		{% for y in x %}
+		<div  style="display:inline; font-weight:900; color:lightgrey;" class="word"> {{y}} </div>
+		{% endfor %}
+		</p>
+		{%endfor%}
+		</p>
+	</div>
+	<form style="text-align:center;" action="." method="POST">
 		<textarea rows="4" cols="50" name="text"></textarea>
 		<br>
 		<input type="submit" name="myForm" value="Send">
